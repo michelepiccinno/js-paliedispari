@@ -10,14 +10,13 @@ const word = prompt('Inserisci una parola');
 const checkedWord = checkPalidnrome(word);
 console.log(checkedWord);
 
-
-//CREO UNA FUNZIONE CHE VERIFICA SE UNA PAROLA NON E' PALINDROMA
-/**Riceve una parola, e restituisce false se non è palindroma
+//CREO UNA FUNZIONE CHE VERIFICA SE UNA PAROLA E' PALINDROMA
+/**Riceve una stringa, e restituisce true se palindroma, viceversa false
  * @param {string} text  
  * @returns {boolean}
- */
+ *///setto una variabile "check=TRUE". Se nel controllo risulta NON palindroma setto "check=FALSE"
 function checkPalidnrome(text) {
-  check = true;
+  let check = true;
   for (i = 0, j = (text.length - 1); i < j; i++, j--) {
     if (text[i] !== text[j]) {
       check = false;
