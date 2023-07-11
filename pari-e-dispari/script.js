@@ -38,9 +38,14 @@ btnInvia.addEventListener("click", function () {
   //INVOCO LA FUNZIONE checkEvenOdd CHE VERIFICA SE LA SOMMA E' PARI O DISPARI
   const checkResult = checkEvenOdd(sum);
 
+  console.log(EvenOddSelect);
+  console.log(typeof (EvenOddSelect));
+  console.log(checkResult);
+  console.log(typeof (checkResult));
+
   //VERIFICHIAMO CHI E' IL VINCITORE
-  if (((EvenOddSelect == 'pari') && (checkResult == true)) ||
-    ((EvenOddSelect == 'dispari') && (checkResult == false))) {
+  if (((EvenOddSelect == 'true') && (checkResult == true)) ||
+    ((EvenOddSelect == 'false') && (checkResult == false))) {
     console.log('ha vinto il giocatore');
     document.getElementById("winner").innerHTML = ('ha vinto il giocatore!');
   } else {
