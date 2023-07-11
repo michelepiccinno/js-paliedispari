@@ -16,10 +16,28 @@
   <title>Jsnack1</title>
 </head>
 
-<body>
+<body class="bg-info">
   <main>
-    <section>
-
+    <section class="m-5">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-8">
+            <label for="number-input" class="form-label">Inserisci un numero da 1 a 5 : </label>
+            <input type="text" class="form-control" name="number-input" id="data-input">
+            <h4 class="my-2">Scegli pari o dispari</h4>
+            <div>
+              <select name="evenodd" id="select-evenodd">
+                <option value="true">PARI</option>
+                <option value="false">DISPARI</option>
+              </select>
+            </div>
+            <button class="invia-dati btn btn-warning my-2">INVIA</button>
+            <p id="pc-num"></p>
+            <p id="somma"></p>
+            <p id="winner"></p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <script src="script.js"></script>

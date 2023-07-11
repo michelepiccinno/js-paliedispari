@@ -16,10 +16,19 @@
   <title>Jsnack1</title>
 </head>
 
-<body>
+<body class="bg-success">
   <main>
-    <section>
-
+    <section class="m-5">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-8">
+            <label for="word-input" class="form-label display-4">Inserisci una parola : </label>
+            <input type="text" class="form-control my-3" name="word-input" id="data-input">
+            <button class="invia-dati btn btn-warning my-2">INVIA</button>
+            <h3 id="output-msg"></h3>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <script src="script.js"></script>
