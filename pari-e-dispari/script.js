@@ -44,8 +44,7 @@ btnInvia.addEventListener("click", function () {
   console.log(typeof (checkResult));
 
   //VERIFICHIAMO CHI E' IL VINCITORE
-  if (((EvenOddSelect == 'true') && (mod == true)) ||
-    ((EvenOddSelect == 'false') && (mod == false))) {
+  if (EvenOddSelect === mod) {
     console.log('ha vinto il giocatore');
     document.getElementById("winner").innerHTML = ('ha vinto il giocatore!');
   } else {
@@ -58,7 +57,6 @@ btnInvia.addEventListener("click", function () {
 
 //CREO UNA FUNZIONE CHE GENERA UN NUMERO RANDOM DA 1 A 5
 /** Ritorna un numero random da 1 a 5
- * @returns
  */
 function numRandom1to5() {
   const randomNum = Math.floor((Math.random() * 5) + 1)
@@ -68,13 +66,13 @@ function numRandom1to5() {
 //CREO UNA FUNZIONE CHE VERIFICA SE UN NUMERO è PARI O DISPARI
 /** Riceve un numero e ritorna true se pari, false se dispari
  * @param {number} num
- * @returns {boolean}
+ * @returns {string}
  */
 function checkEvenOdd(num) {
   if ((num) % 2 === 0) {
-    mod = true;
+    mod = 'true';
   } else {
-    mod = false;
+    mod = 'false';
   }
   return mod;
 }
