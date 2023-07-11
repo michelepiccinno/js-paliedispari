@@ -13,7 +13,7 @@ const btnInvia = document.querySelector(".invia-dati");
 //CREO L'EVENTLISTENER
 btnInvia.addEventListener("click", function () {
   const userNum = parseInt(inputNumElement.value);
-  const EvenOddSelect = inputEvenOddElement.value;
+  const EvenOddSelect = inputEvenOddElement.value === "true";  //se condizione === true allora = (assegna) true booleano
   console.log(`Numero scelto dal giocatore: ${userNum}`);
   console.log(`il giocatore ha scelto : ${EvenOddSelect}`);
 
@@ -37,11 +37,6 @@ btnInvia.addEventListener("click", function () {
 
   //INVOCO LA FUNZIONE checkEvenOdd CHE VERIFICA SE LA SOMMA E' PARI O DISPARI
   const checkResult = checkEvenOdd(sum);
-
-  console.log(EvenOddSelect);
-  console.log(typeof (EvenOddSelect));
-  console.log(checkResult);
-  console.log(typeof (checkResult));
 
   //VERIFICHIAMO CHI E' IL VINCITORE
   if (EvenOddSelect === checkResult) {
@@ -69,11 +64,10 @@ function numRandom1to5() {
  * @returns {boolean}
  */
 function checkEvenOdd(num) {
+  let mod = false;
   if ((num) % 2 === 0) {
-    mod = 'true';
-  } else {
-    mod = 'false';
-  }
+    mod = true;
+  } 
   return mod;
 }
 

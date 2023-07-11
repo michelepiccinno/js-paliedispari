@@ -1,3 +1,4 @@
+'use strict'
 /*Palidroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma (una parola che 
@@ -31,7 +32,7 @@ btnInvia.addEventListener("click", function () {
  *///setto una variabile "check=TRUE". Se nel controllo risulta NON palindroma setto "check=FALSE"
 function checkPalidnrome(text) {
   let check = true;
-  for ( i=0, j=(text.length - 1); i<j; i++, j--) {
+  for (let i=0, j=(text.length - 1); i<j; i++, j--) {
     if (text[i] !== text[j]) {
       check = false;
     }
