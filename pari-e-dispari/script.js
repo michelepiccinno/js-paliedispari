@@ -21,9 +21,9 @@ btnInvia.addEventListener("click", function () {
   //VERIFICO SE L'UTENTE HA INSERITO TYPE NUMBER
   if ((inputNumElement.value < 1) || (inputNumElement.value > 5)) {
     return alert('inserisci un numero minore o uguale a 5!');
-  } /*else if (typeof inputNumElement.value !== 'number') {           DA VERIFICARE PERCHE' NON VA
+  } else if (isNaN(inputNumElement.value)) {
     return alert('non sono ammessi caratteri diversi da numeri!');
-  }*/
+  }
 
   //INVOCO LA FUNZIONE CHE GENERA UN RANDOM NUMBER DA 1 A 5 PER IL PC
   const pcNumber = numRandom1to5();
@@ -44,8 +44,8 @@ btnInvia.addEventListener("click", function () {
   console.log(typeof (checkResult));
 
   //VERIFICHIAMO CHI E' IL VINCITORE
-  if (((EvenOddSelect == 'true') && (checkResult == true)) ||
-    ((EvenOddSelect == 'false') && (checkResult == false))) {
+  if (((EvenOddSelect == 'true') && (mod == true)) ||
+    ((EvenOddSelect == 'false') && (mod == false))) {
     console.log('ha vinto il giocatore');
     document.getElementById("winner").innerHTML = ('ha vinto il giocatore!');
   } else {

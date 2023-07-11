@@ -31,7 +31,7 @@ btnInvia.addEventListener("click", function () {
  *///setto una variabile "check=TRUE". Se nel controllo risulta NON palindroma setto "check=FALSE"
 function checkPalidnrome(text) {
   let check = true;
-  for (i = 0, j = (text.length - 1); i < j; i++, j--) {
+  for ( i=0, j=(text.length - 1); i<j; i++, j--) {
     if (text[i] !== text[j]) {
       check = false;
     }
