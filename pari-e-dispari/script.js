@@ -44,7 +44,7 @@ btnInvia.addEventListener("click", function () {
   console.log(typeof (checkResult));
 
   //VERIFICHIAMO CHI E' IL VINCITORE
-  if (EvenOddSelect === mod) {
+  if (EvenOddSelect === checkResult) {
     console.log('ha vinto il giocatore');
     document.getElementById("winner").innerHTML = ('ha vinto il giocatore!');
   } else {
@@ -66,7 +66,7 @@ function numRandom1to5() {
 //CREO UNA FUNZIONE CHE VERIFICA SE UN NUMERO è PARI O DISPARI
 /** Riceve un numero e ritorna true se pari, false se dispari
  * @param {number} num
- * @returns {string}
+ * @returns {boolean}
  */
 function checkEvenOdd(num) {
   if ((num) % 2 === 0) {
